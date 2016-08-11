@@ -23,10 +23,15 @@
           // Success!
           var data = JSON.parse(request.responseText);
           for (var i = 0; i < data.assets.length; i++) {
-            if (data.assets[i].name === "laser-pong-" + data.tag_name + "-win64.exe") {
+            if (data.assets[i].name === "laser-pong-" + data.tag_name + "-windows-x86_64.exe") {
               releaseWin64Button = document.getElementById("win64-release");
               if (releaseWin64Button) {
                 releaseWin64Button.setAttribute("href", data.assets[i].browser_download_url);
+              }
+            } else if (data.assets[i].name === "laser-pong-" + data.tag_name + "-linux-x86_64") {
+              releaseLin64Button = document.getElementById("lin64-release");
+              if (releaseLin64Button) {
+                releaseLin64Button.setAttribute("href", data.assets[i].browser_download_url);
               }
             } else {
               console.error("Found unexpected asset: " + data.assets[i]);
@@ -147,6 +152,10 @@ you get to zero lives.</p>
           <a id="win64-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
             <small>Latest Release</small>
             windows
+          </a>
+          <a id="lin64-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+            <small>Latest Release</small>
+            linux
           </a>
           <a href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
             <small>Latest Release</small>
