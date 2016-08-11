@@ -3,12 +3,12 @@ Assignment 7: GUI Game
 """
 
 from __future__ import division
+from random import randint
+from time import sleep
 try:
   from tkinter import *
 except:
   from Tkinter import *
-from random import randint
-from time import sleep
 
 class Game(object):
   def __init__(self):
