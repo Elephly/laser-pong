@@ -23,20 +23,10 @@
           // Success!
           var data = JSON.parse(request.responseText);
           for (var i = 0; i < data.assets.length; i++) {
-            if (data.assets[i].name === "laser-pong-" + data.tag_name + ".exe") {
-              releaseExeButton = document.getElementById("exe-release");
-              if (releaseExeButton) {
-                releaseExeButton.setAttribute("href", data.assets[i].browser_download_url);
-              }
-            } else if (data.assets[i].name === "laser-pong-" + data.tag_name + "-bundle.7z") {
-              release7zButton = document.getElementById("7z-release");
-              if (release7zButton) {
-                release7zButton.setAttribute("href", data.assets[i].browser_download_url);
-              }
-            } else if (data.assets[i].name === "laser-pong-" + data.tag_name + "-bundle.zip") {
-              releaseZipButton = document.getElementById("zip-release");
-              if (releaseZipButton) {
-                releaseZipButton.setAttribute("href", data.assets[i].browser_download_url);
+            if (data.assets[i].name === "laser-pong-" + data.tag_name + "-win64.exe") {
+              releaseWin64Button = document.getElementById("win64-release");
+              if (releaseWin64Button) {
+                releaseWin64Button.setAttribute("href", data.assets[i].browser_download_url);
               }
             } else {
               console.error("Found unexpected asset: " + data.assets[i]);
@@ -154,17 +144,9 @@ you get to zero lives.</p>
         </section>
 
         <aside id="sidebar">
-          <a id="exe-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+          <a id="win64-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
             <small>Latest Release</small>
-            .exe file
-          </a>
-          <a id="7z-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
-            <small>Latest Release</small>
-            .7z bundle
-          </a>
-          <a id="zip-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
-            <small>Latest Release</small>
-            .zip bundle
+            windows 64-bit
           </a>
           <a href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
             <small>Latest Release</small>
