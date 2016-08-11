@@ -12,6 +12,44 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <script>
+      var request = new XMLHttpRequest();
+      
+      request.open('GET', 'https://api.github.com/repos/elephly/laser-pong/releases/latest', true);
+
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          // Success!
+          var data = JSON.parse(request.responseText);
+          for (var i = 0; i < data.assets.length; i++) {
+            if (data.assets[i].name === "laser-pong-" + data.tag_name + ".exe") {
+              releaseExeButton = document.getElementById("exe-release");
+              if (releaseExeButton) {
+                releaseExeButton.setAttribute("href", data.assets[i].browser_download_url);
+              }
+            } else if (data.assets[i].name === "laser-pong-" + data.tag_name + "-bundle.7z") {
+              release7zButton = document.getElementById("7z-release");
+              if (release7zButton) {
+                release7zButton.setAttribute("href", data.assets[i].browser_download_url);
+              }
+            } else if (data.assets[i].name === "laser-pong-" + data.tag_name + "-bundle.zip") {
+              releaseZipButton = document.getElementById("zip-release");
+              if (releaseZipButton) {
+                releaseZipButton.setAttribute("href", data.assets[i].browser_download_url);
+              }
+            } else {
+              console.error("Found unexpected asset: " + data.assets[i]);
+            }
+          }
+        } else {
+          // We reached our target server, but it returned an error
+          console.error(request);
+        }
+      };
+      
+      request.send();
+    </script>
 
     <title>laser-pong by Elephly</title>
   </head>
@@ -116,6 +154,22 @@ you get to zero lives.</p>
         </section>
 
         <aside id="sidebar">
+          <a id="exe-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+            <small>Latest Release</small>
+            .exe file
+          </a>
+          <a id="7z-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+            <small>Latest Release</small>
+            .7z bundle
+          </a>
+          <a id="zip-release" href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+            <small>Latest Release</small>
+            .zip bundle
+          </a>
+          <a href="https://github.com/Elephly/laser-pong/releases/latest" class="button">
+            <small>Latest Release</small>
+            notes
+          </a>
           <a href="https://github.com/Elephly/laser-pong/zipball/master" class="button">
             <small>Download</small>
             .zip file
