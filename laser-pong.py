@@ -3,7 +3,10 @@ Assignment 7: GUI Game
 """
 
 from __future__ import division
-from tkinter import *
+try:
+  from tkinter import *
+except:
+  from Tkinter import *
 from random import randint
 from time import sleep
 
