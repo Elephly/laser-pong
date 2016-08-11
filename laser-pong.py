@@ -224,7 +224,7 @@ class Game(object):
     self.gameCanvas.tag_bind(quit, "<Button-1>", self.Quit)
 
   def Quit(self, e=None):
-    self.root.destroy()
+    self.root.quit()
 
   def GameLoop(self):
 
