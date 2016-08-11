@@ -1,5 +1,5 @@
 """
-Assignment 7: GUI Game
+laser-pong
 """
 
 from __future__ import division
