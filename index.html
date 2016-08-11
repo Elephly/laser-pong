@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Laser-pong by Elephly</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Laser-pong</h1>
+        <h2>COMP1405 Assignment 7 - A simple game of Pong... survival style!</h2>
+        <a href="https://github.com/Elephly/laser-pong" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="laser-pong" class="anchor" href="#laser-pong" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>laser-pong</h1>
+
+<p>COMP1405 Assignment 7 - An arcade survival style game of Pong!</p>
+
+<h3>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<ul>
+<li>Python 3.5</li>
+<li>tkinter</li>
+</ul>
+
+<h3>
+<a id="objective" class="anchor" href="#objective" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objective</h3>
+
+<p>You play as the left (red outlined) paddle in a game of pong. The basic
+rules of pong are followed but there are some twists. Use 'w' to move your
+paddle up and 's' to move your paddle down. As you're playing you'll notice
+that every 3 seconds or so, a black box will appear with random dimension
+and location. You may choose to dismiss it as unimportant, or you may
+obliterate it. Press the space bar to change into your gun form, but be
+carful, in gun form your paddle can no longer deflect the ball; it can only
+deflect the ball once it is fully transformed back into its paddle form (it
+will turn black). So now that you're in your gun form, you can press 'o' to
+fire green lasers. These lasers do not affect the other paddle or the ball,
+so do not waste time trying to shoot at them. If you shoot at a black box
+ten times, it will be destroyed. Awesome, but what do you get out of doing
+that? Well, firstly, you get one point for every black box you destroy.
+Next, you restart the timer counting down to your death (that's right, you
+HAVE to destroy these boxes if you want to live). Lastly, you will get
+either a power shot or a nurf every time you destroy a box. If you get a
+power shot, you can press 'p' to release it (in gun form), but this time,
+you're aiming for the other paddle. If you hit him with the yellow power
+shot, you will slow his speed by less than half. If you hit him with the
+orange power shot, he will be stopped dead. Both of these effects only last
+for a limited time however. Now for the nurfs, there are three possible
+outcomes. You may be slowed by less than half, you may be stopped dead, or
+your controls may be reversed. These also only last for a couple seconds.
+Now that you know how to play, I should tell you exactly what the point is.
+All you really want to do is last as long as you can and get as many
+points as possible. Scoring on the other paddle gets you 5 points. The goal
+is the high score man. As a last note, you have 3 lives to start out, and
+obviously whenever you are scored on, you lose a live. The game ends when
+you get to zero lives.</p>
+
+<h3>
+<a id="controls" class="anchor" href="#controls" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controls</h3>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+<th>Availability (gun / paddle / both)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w</td>
+<td>Move paddle up</td>
+<td>both</td>
+</tr>
+<tr>
+<td>s</td>
+<td>Move paddle down</td>
+<td>both</td>
+</tr>
+<tr>
+<td>SPACE</td>
+<td>Transform (toggle gun/paddle state)</td>
+<td>both</td>
+</tr>
+<tr>
+<td>o</td>
+<td>Fire green laser</td>
+<td>gun</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Fire power shot</td>
+<td>gun</td>
+</tr>
+</tbody>
+</table>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Elephly/laser-pong/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Elephly/laser-pong/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Elephly/laser-pong"></a> is maintained by <a href="https://github.com/Elephly">Elephly</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
