@@ -2,8 +2,8 @@
 COMP1405 Assignment 7 - An arcade survival style game of Pong!
 
 ### Prerequisites
-- Python 2.7
-- Tkinter
+- Python 3.5
+- tkinter
 
 ### Objective
 You play as the left (red outlined) paddle in a game of pong. The basic
