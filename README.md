@@ -5,6 +5,15 @@ COMP1405 Assignment 7 - An arcade survival style game of Pong!
 - Python 3.5
 - tkinter
 
+### Controls
+| Key   | Action                              | Availability (gun / paddle / both) |
+| ----- | ----------------------------------- | ---------------------------------- |
+| w     | Move paddle up                      | both                               |
+| s     | Move paddle down                    | both                               |
+| SPACE | Transform (toggle gun/paddle state) | both                               |
+| o     | Fire green laser                    | gun                                |
+| p     | Fire power shot                     | gun                                |
+
 ### Objective
 You play as the left (red outlined) paddle in a game of pong. The basic
 rules of pong are followed but there are some twists. Use 'w' to move your
@@ -35,12 +44,3 @@ points as possible. Scoring on the other paddle gets you 5 points. The goal
 is the high score man. As a last note, you have 3 lives to start out, and
 obviously whenever you are scored on, you lose a live. The game ends when
 you get to zero lives.
-
-### Controls
-| Key   | Action                              | Availability (gun / paddle / both) |
-| ----- | ----------------------------------- | ---------------------------------- |
-| w     | Move paddle up                      | both                               |
-| s     | Move paddle down                    | both                               |
-| SPACE | Transform (toggle gun/paddle state) | both                               |
-| o     | Fire green laser                    | gun                                |
-| p     | Fire power shot                     | gun                                |
